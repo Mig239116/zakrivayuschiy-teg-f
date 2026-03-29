@@ -11,4 +11,5 @@
   --sparks-color: red;
   --main-body-color: transparent;
   --core-color: transparent;
+  --content-width: clamp(300px, 100% - 2rem, 700px);
 }
