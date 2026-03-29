@@ -225,31 +225,37 @@
   pointer-events: visible;
 }
 
-.filter-grayscale { 
-  filter: grayscale(0.8); 
-}
-.filter-blur { 
-  filter: blur(2px); 
-}
-.filter-brightness { 
-  filter: brightness(1.5); 
-}
-.filter-contrast { 
-  filter: contrast(200%); 
-}
-.filter-hue-rotate { 
-  filter: hue-rotate(90deg); 
-}
-.filter-sepia { 
-  filter: sepia(1); 
-}
-.filter-invert { 
-  filter: invert(0.8); 
-}
-.filter-multiple { 
-  filter: grayscale(0.5) blur(1px) contrast(120%); 
+.filter-grayscale {
+  filter: grayscale(0.8);
 }
 
+.filter-blur {
+  filter: blur(2px);
+}
+
+.filter-brightness {
+  filter: brightness(1.5);
+}
+
+.filter-contrast {
+  filter: contrast(200%);
+}
+
+.filter-hue-rotate {
+  filter: hue-rotate(90deg);
+}
+
+.filter-sepia {
+  filter: sepia(1);
+}
+
+.filter-invert {
+  filter: invert(0.8);
+}
+
+.filter-multiple {
+  filter: grayscale(0.5) blur(1px) contrast(120%);
+}
 
 @media (width <= 375px) {
   .header,

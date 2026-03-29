@@ -60,10 +60,12 @@
 }
 
 @keyframes heart-scale {
-  0% { 
+  
+  0% {
     transform: scale(1);
   }
-  50% { 
+  
+  50% {
     transform: scale(1.25);
   }
 
@@ -72,9 +74,11 @@
   }
 }
 @keyframes sparks-show {
+  
   0% {
     opacity: 0;
   }
+  
   80% {
     opacity: 1;
   }
