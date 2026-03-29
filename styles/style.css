@@ -13,4 +13,296 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--font-main);
+  font-variation-settings: 'wght' var(--text-weight);
+  background-image: var(--background-gradient);
+  background-size: cover;
+  background-attachment: fixed;
 }
+
+.header {
+  width: clamp(300px, 100% - 2rem, 700px);
+  background-color: #fff;
+  border: 2px solid #000;
+  text-align: center;
+  padding: clamp(1rem, 5vw, 2rem);
+  margin: 100px auto 50px auto;
+}
+
+.header__title {
+    font-family: var(--font-accent);
+    font-size: clamp(2rem, 8vw, 4rem);
+    text-transform: uppercase;
+}
+
+.header__subtitle {
+    font-family: var(--font-accent);
+    font-size: clamp(0.8rem, 4vw, 1.2rem);
+    margin-top: 1rem;
+}
+
+.card {
+    width: clamp(300px, 100% - 2rem, 700px);
+    background: #fff;
+    border: 2px solid #000;
+    margin: 0 auto 50px auto;
+}
+
+.card__title {
+    font-family: var(--font-main);
+    font-variation-settings: 'wght' var(--title-weight);
+    font-size: 18px;
+    padding: 5px 10px;
+    border-bottom: 2px solid #000;
+}
+
+.card__image-wrapper {
+    position: relative;
+    border-bottom: 2px solid #000;
+}
+
+.card__image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.card__label {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    font-family: var(--font-accent);
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #000;
+    mix-blend-mode: hard-light;
+    opacity: 0.7;
+    text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+}
+
+@supports (text-stroke: 1px #fff) {
+    .card__label {
+        text-shadow: none;
+        -webkit-text-stroke: 1px #fff;
+        text-stroke: 1px #fff;
+    }
+}
+
+.card__content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.card__text {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    font-size: 18px;
+    line-height: 1.17;
+}
+
+.card__like-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.button {
+  position: relative;
+  background: var(--button-bg, #fff);
+  border: 2px solid #000;
+  padding: 9px 17px;
+  cursor: pointer;
+  font-family: var(--font-accent);
+  font-size: 14px;
+  line-height: 0.9;
+  color: #000;
+  transition: box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0 #000;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+  z-index: 0;
+}
+
+.button:hover::before {
+  transform: translateX(0);
+}
+
+.button__text {
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
+  color: #fff;
+}
+
+
+
+.card__icon-button {
+  background: transparent;
+  border: 2px solid transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: border 0.3s ease;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border-color: #000;
+}
+
+.save-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 50px auto;
+}
+
+.floppy-icon {
+  width: 21px;
+  height: 21px;
+}
+
+.dialog {
+  background: #fff;
+  border: 2px solid #000;
+  padding: 30px;
+  max-width: 353px;
+  margin: auto;
+}
+
+.dialog[open] {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.dialog::backdrop {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.dialog__content {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.dialog__text {
+  font-family: var(--font-accent);
+  font-size: 14px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.dialog__button {
+  width: 100%;
+}
+
+.like-icon {
+  width: 39px;
+  height: 36px;
+  display: block;
+  pointer-events: visible;
+}
+
+.filter-grayscale { 
+  filter: grayscale(0.8); 
+}
+.filter-blur { 
+  filter: blur(2px); 
+}
+.filter-brightness { 
+  filter: brightness(1.5); 
+}
+.filter-contrast { 
+  filter: contrast(200%); 
+}
+.filter-hue-rotate { 
+  filter: hue-rotate(90deg); 
+}
+.filter-sepia { 
+  filter: sepia(1); 
+}
+.filter-invert { 
+  filter: invert(0.8); 
+}
+.filter-multiple { 
+  filter: grayscale(0.5) blur(1px) contrast(120%); 
+}
+
+
+@media (width <= 375px) {
+  .header,
+  .card {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .card__label {
+    top: 20px;
+    right: 10px;
+    font-size: 12px;
+  }
+
+  .card__title {
+    font-size: 16px;
+    padding: 4px 10px;
+  }
+
+  .card__content {
+    padding: 15px;
+  }
+
+  .card__text {
+    font-size: 16px;
+    gap: 15px;
+  }
+
+  .save-button {
+    width: calc(100% - 2rem);
+    justify-content: center;
+    flex-direction: column; 
+  }
+
+  .floppy-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .dialog {
+    max-width: 341px;
+    padding: 30px 40px;
+  }
+
+  .dialog__content {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .dialog__text {
+    font-size: 12px;
+  }
+}
+
+

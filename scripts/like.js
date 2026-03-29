@@ -11,6 +11,18 @@
 const likeHeartArray = document.querySelectorAll('.like-icon');
 const likeButtonArray = document.querySelectorAll('.card__like-button');
 const iconButtonArray = document.querySelectorAll('.card__icon-button');
+const saveBtn = document.getElementById('saveButton');
+const dialog = document.getElementById('memoryDialog');
+const closeBtn = document.getElementById('closeDialog');
+
+if (saveBtn && dialog && closeBtn) {
+  saveBtn.addEventListener('click', () => {
+    dialog.showModal();
+  });
+  closeBtn.addEventListener('click', () => {
+    dialog.close();
+  });
+}
 
 iconButtonArray.forEach((iconButton, index) => {
   iconButton.onclick = () =>
