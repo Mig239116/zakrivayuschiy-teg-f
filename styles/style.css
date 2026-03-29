@@ -288,7 +288,7 @@
   .save-button {
     width: calc(100% - 2rem);
     justify-content: center;
-    flex-direction: column; 
+    flex-direction: column;
   }
 
   .floppy-icon {
