@@ -10,7 +10,6 @@
 
 */
 
-
 .like-icon .contour {
   transition: fill 0.1s linear 0s;
 }
@@ -20,7 +19,6 @@
 .like-icon .main-body {
   transition: fill 0.3s linear 0s;
 }
-
 
 .like-icon:hover .core {
   --core-color: black;
@@ -60,11 +58,10 @@
 }
 
 @keyframes heart-scale {
-  
   0% {
     transform: scale(1);
   }
-  
+
   50% {
     transform: scale(1.25);
   }
@@ -74,11 +71,10 @@
   }
 }
 @keyframes sparks-show {
-  
   0% {
     opacity: 0;
   }
-  
+
   80% {
     opacity: 1;
   }
